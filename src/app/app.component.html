@@ -350,7 +350,34 @@
 
   </div>
 
-  
+  <h1 [innerHTML]="title"></h1>
+
+  <img [src]="imageUrl" alt="Image" [width]="200">
+
+  <p [ngClass]="nomClasse"> Ceci est une application</p>
+
+  <button [disabled]="disbouton">Gros boutton</button>
+
+  <button (click)="clique()">appuie ici</button>
+  <br><br>
+ <!--
+  <button (click)="detail()">Montrer details</button>
+  <Table>
+    <th>Jean</th>
+    <th>Mich</th>
+   
+    <tr *ngIf="detail">
+      <td>Age</td>
+      <td>Email</td>
+      <td>Adresse</td>
+      <button (click)="detailNul()">Cacher detail</button>
+    </tr>
+
+
+
+
+  </Table>
+-->
 
 </div>
 
