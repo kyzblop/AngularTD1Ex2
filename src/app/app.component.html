@@ -360,24 +360,27 @@
 
   <button (click)="clique()">appuie ici</button>
   <br><br>
- <!--
-  <button (click)="detail()">Montrer details</button>
+ 
+  <button (click)="cacherDetails()" *ngIf="detailBouton; else faux">Cacher details</button>
+  <ng-template #faux ><button (click)="cacherDetails()">Montrerdetails</button></ng-template>
   <Table>
-    <th>Jean</th>
-    <th>Mich</th>
-   
-    <tr *ngIf="detail">
-      <td>Age</td>
-      <td>Email</td>
-      <td>Adresse</td>
-      <button (click)="detailNul()">Cacher detail</button>
+    <tr>
+      <th>Nom</th>
+      <th>Prenom</th>
+      <th *ngIf="detailBouton">Email</th>
+      <th *ngIf="detailBouton">Tel</th>
+    </tr>
+    <tr *ngFor="let u of utilisateur">
+      <td>{{ u.nom }}</td>
+      <td>{{ u.prenom }}</td>
+      <td *ngIf="detailBouton">{{ u.email }}</td>
+      <td *ngIf="detailBouton">{{ u.tel }}</td>
     </tr>
 
 
 
 
   </Table>
--->
 
 </div>
 

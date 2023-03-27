@@ -16,16 +16,24 @@ export class AppComponent {
   clique(){
     console.log("On a cliqué sur le bouton")
   }
-  
-  detail:boolean = false
- 
-  details(){
-    this.detail = true
-  }
 
-  detailNul(){
-    this.detail = false
-  }
+  utilisateur:any[] = [
+    {"nom" : "Dupont", "prenom":"Jean", "email":"info@info.fr", "tel":"014"},
+    {"nom" : "Martin", "prenom":"Jean", "email":"info@info.fr", "tel":"014"},
+    {"nom" : "Dupont", "prenom":"Jean", "email":"info@info.fr", "tel":"014"},
+    {"nom" : "Dupont", "prenom":"Jean", "email":"info@info.fr", "tel":"014"},
+    {"nom" : "Dupont", "prenom":"Jean", "email":"info@info.fr", "tel":"014"}
+  ]
   
+  detailBouton:boolean = true
+ 
+  cacherDetails(): void {
+    // if(this.detailBouton){
+    //   this.detailBouton = false
+    // } else {
+    //   this.detailBouton = true
+    // }
+    this.detailBouton = !this.detailBouton
+  }
   
 }
