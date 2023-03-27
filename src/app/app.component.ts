@@ -20,9 +20,9 @@ export class AppComponent {
   utilisateur:any[] = [
     {"nom" : "Dupont", "prenom":"Jean", "email":"info@info.fr", "tel":"014"},
     {"nom" : "Martin", "prenom":"Jean", "email":"info@info.fr", "tel":"014"},
-    {"nom" : "Dupont", "prenom":"Jean", "email":"info@info.fr", "tel":"014"},
-    {"nom" : "Dupont", "prenom":"Jean", "email":"info@info.fr", "tel":"014"},
-    {"nom" : "Dupont", "prenom":"Jean", "email":"info@info.fr", "tel":"014"}
+    {"nom" : "Lord", "prenom":"Jean", "email":"info@info.fr", "tel":"014"},
+    {"nom" : "Dupuis", "prenom":"Jean", "email":"info@info.fr", "tel":"014"},
+    {"nom" : "MacGregor", "prenom":"Jean", "email":"info@info.fr", "tel":"014"}
   ]
   
   detailBouton:boolean = true
@@ -34,6 +34,16 @@ export class AppComponent {
     //   this.detailBouton = true
     // }
     this.detailBouton = !this.detailBouton
+  }
+
+  saisie:string=""
+
+  oUtil: {nom:string, prenom:string, email:string, tel:string} =
+  {"nom":"test", "prenom":"test", "email":"test", "tel":"test"}
+
+  add(): void{
+    this.oUtil.nom = this.saisie
+    this.utilisateur.push(this.oUtil)
   }
   
 }

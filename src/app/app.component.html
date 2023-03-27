@@ -362,7 +362,7 @@
   <br><br>
  
   <button (click)="cacherDetails()" *ngIf="detailBouton; else faux">Cacher details</button>
-  <ng-template #faux ><button (click)="cacherDetails()">Montrerdetails</button></ng-template>
+  <ng-template #faux ><button (click)="cacherDetails()"mfdikovs,lk>Montrerdetails</button></ng-template>
   <Table>
     <tr>
       <th>Nom</th>
@@ -376,12 +376,22 @@
       <td *ngIf="detailBouton">{{ u.email }}</td>
       <td *ngIf="detailBouton">{{ u.tel }}</td>
     </tr>
-
-
-
-
   </Table>
 
+  <input type="text" [(ngModel)]="saisie">
+
+  <p>Zone de saisie : {{saisie}}</p>
+
+
+  <button (click)="add()">Add</button>
+  <table>
+    <tr>
+      <th>Nom d'utilisateur</th>
+    </tr>
+    <tr *ngFor="let u of utilisateur">
+      <td>{{u.nom}}</td>
+    </tr>
+  </table>
 </div>
 
 
